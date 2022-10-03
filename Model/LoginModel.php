@@ -9,7 +9,7 @@
     **/
     public function fetchEmail(string $email) :array
     {
-      $this->query("SELECT * FROM `db_user` WHERE `email` = :email");
+      $this->query("SELECT * FROM `db_users` WHERE `email` = :email");
       $this->bind('email', $email);
       $this->execute();
 

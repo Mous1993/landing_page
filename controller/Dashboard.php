@@ -20,11 +20,12 @@
     /**
       * @param null|void
       * @return array
-      * @desc Returns an array of clients by calling the DashboardModel fetchClients method...
+      * @desc Returns an array of clients by calling the DashboardModel fetchPaginatedClients method...
     **/
     public function getClients() :array
     {
-      return $this->dashboardModel->fetchClients();
+      $PaginatedClients = $this->dashboardModel->fetchPaginatedClients();
+      return $PaginatedClients;
     }
   }
  ?>
